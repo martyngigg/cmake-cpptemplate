@@ -1,3 +1,6 @@
+# Note: automake support is community-based. The maintaners do not use automake
+# internally.
+
 m4_include(../googletest/m4/acx_pthread.m4)
 
 AC_INIT([Google C++ Mocking Framework],
@@ -8,6 +11,7 @@ AC_INIT([Google C++ Mocking Framework],
 # Provide various options to initialize the Autoconf and configure processes.
 AC_PREREQ([2.59])
 AC_CONFIG_SRCDIR([./LICENSE])
+AC_CONFIG_MACRO_DIRS([m4])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_HEADERS([build-aux/config.h])
 AC_CONFIG_FILES([Makefile])
